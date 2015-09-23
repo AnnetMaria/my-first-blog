@@ -2,12 +2,20 @@
 
 {% block content %}
     {% for post in posts %}
-        <div class="post">
-            <div class="date">
-                {{ post.published_date }}
-            </div>
+        <div class="col-sm-9 post blog-post">
+
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p class="date blog-post-meta">
+                {{ post.published_date }}
+            </p>
             <p>{{ post.text|linebreaks }}</p>
+        </div>
+
+        <div class="col-sm-3 blog-sidebar">
+          <div class="sidebar-module">
+            <h4>About</h4>
+            <p>This is a work in progress page that I built at the Django girls workshop in Groningen.</p>
+          </div>
         </div>
     {% endfor %}
 {% endblock content %}
