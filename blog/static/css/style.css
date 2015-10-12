@@ -1,0 +1,149 @@
+.post {
+  display: none;
+}
+
+/*nav
+*/
+
+.navbar {
+  height: 20%;
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.nav-item{
+  padding-left: 40px;
+  font-family: 'Inconsolata', ;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.navbar>h1{
+  margin: 0px;
+  color: #262015;
+  /*padding-top: 30px;*/
+  align-items: center;
+  font-family: 'Lobster', cursive;
+  font-size: 49px;
+  cursor: pointer;
+}
+
+
+
+html, body, .container, .row{
+  height: 100%;
+  display: block;
+  background-color: #FCFAE1;
+}
+
+/*
+*ROWS
+*/
+.row1{
+  height: 57%;
+  background-color: #FCFAE1;
+}
+
+.row2{
+  height: 20%;
+
+}
+
+
+.half-vlak{
+  height:50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.vlak{
+  padding: 0px;
+}
+
+.vlak h1, p {
+  color: #FCFAE1;
+  padding: 20px;
+}
+
+.vlak p {
+  font-size: 12px;
+}
+
+#vlak1{
+  height: 100%;
+}
+
+#vlak1a{
+  background-color: #D90118;
+
+}
+
+#vlak1b{
+ background-color:
+}
+
+#vlak2{
+  height:100%;
+}
+
+#vlak2a{
+  	background-color: #36939B;
+    transition-property: background-color;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+.hover {
+  background-color: #FF1B00;
+  transition-property: background-color;
+  transition-duration: .5s;
+  transition-timing-function: ease;
+}
+
+#vlak2b {
+  background-color: #98D8C8;
+}
+
+
+#vlak3{
+    padding: 0px;
+    height: 100%;
+    background-image: url("../img/Annet.JPG");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+
+  }
+
+#vlak4{
+    background-color:;
+}
+
+#vlak5{
+
+    }
+
+#vlak6{
+
+}
+
+
+.welcome {
+  display: inherit;
+}
+
+.ICT{
+  display: none;
+}
+
+.TQC {
+  display: none;
+}
+
+.philosopher{
+  display: none;
+}
