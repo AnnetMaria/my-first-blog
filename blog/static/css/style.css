@@ -7,6 +7,8 @@
 
 .navbar {
   height: 20%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display:flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -15,7 +17,7 @@
 
 .nav-item{
   padding-left: 40px;
-  font-family: 'Inconsolata', ;
+  font-family: 'Muli' ;
   font-size: 1.5em;
   cursor: pointer;
 }
@@ -69,8 +71,11 @@ html, body, .container, .row{
   padding: 20px;
 }
 
-.vlak p {
-  font-size: 12px;
+.vlak p, .half-vlak p {
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Muli' ;
 }
 
 #vlak1{

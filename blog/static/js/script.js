@@ -61,9 +61,5 @@ $(document).ready(function(){
     });
   }
 
-  $('#vlak1b').mouseover(function(){
-    $('#vlak1a>h1').append(" <p>This the video (in Dutch) that I created for my Young Sogetist of the Year Nomination</p> ")})
-      .mouseout(function(){
-        $('#vlak1a p').remove();
-      });
+
   });
