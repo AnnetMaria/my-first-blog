@@ -8,8 +8,8 @@
     <div class="row1">
       <div class="col-md-8">
       <div class="jumbotron red-block">
-        <p>Welkom op mijn portfolio site in wording.</p>
-        <p>Hoera! Ik ben nominee voor de Young Sogetist of the Year verkiezing. Zolang de verkiezingen lopen is deze site speciaal daarvoor ingericht.</p>
+        <p>Hoera! Ik ben nominee voor de Young Sogetist of the Year verkiezing.</p>
+        <p>Stem op mij, of kom er achter waarom je op mij zou moeten stemmen.</p>
       </div>
       <div class="col-md-6 vlak half-vlak"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/3wwB8V_zygc" frameborder="0" allowfullscreen></iframe></div>
       <div class='col-md-6 vlak half-vlak blue-block'><p class="padding-p">"Breng je passies in beeld", dat was de opdracht die ik meekreeg voor het filmpje hiernaast.</p></div>
@@ -25,9 +25,14 @@
 
 </div><!-- einde van de banner -->
 
+<div class="col-md-12 blue-block margin-top  vlak">
+  <div class="col-md-4 blue-block vlak"><h1 class="padding-p black-text-box">Anderen over mij...</h1></div>
+  <div class="col-md-8 lightblue-block"><p class="padding-p black-text-box">Natuurlijk vind ik mezelf (meestal) goed. Maar het allerbelangrijkste is uiteraard wat collega's van mij vinden.</p></div>
+</div>
+
 
     {% for post in posts %}
-        <div class="col-md-12 post">
+        <div class="col-md-12 post vlak">
 
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             <p class="date blog-post-meta">

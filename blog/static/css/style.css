@@ -29,8 +29,25 @@
   color: #262015;
 }
 
+.white-text-box{
+  color: #FCFAE1;
+}
+
 .padding-p{
   padding: 40px;
+}
+
+.margin-top{
+  margin-top: 5%;
+}
+
+.full-height{
+  height: 100%;
+}
+
+img{
+  width: auto;
+  height: 100%;
 }
 
 /*nav
@@ -88,6 +105,11 @@ html, body, .container, .row{
   background-color: #FCFAE1;
 }
 
+h1{
+  font-size: 21px;
+  margin-top: 0px;
+}
+
 /*
 *ROWS
 */
@@ -112,6 +134,7 @@ html, body, .container, .row{
 
 .vlak{
   padding: 0px;
+
 }
 
 .vlak h1, p {
@@ -195,6 +218,9 @@ html, body, .container, .row{
 .philosopher{
   display: none;
 }
+
+
+
 
 
 /* PAGES */

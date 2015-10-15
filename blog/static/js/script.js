@@ -19,7 +19,7 @@ $(document).ready(function(){
     });
   });
 
-  $(".welcome #vlak2b").mouseenter(function(){
+  $(".welcome #vlak2a").mouseenter(function(){
     $("#contacttext").text("annet.boog@sogeti.com");
   });
 

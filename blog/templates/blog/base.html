@@ -18,9 +18,9 @@
     <div class="container">
       <nav class="navbar">
         <a href="{% url 'post_list' %}"><h1 id="welcome">Annet Boog</h1></a>
-        <a href="{% url 'ict' %}"><div id="ICT" class="nav-item">ICT-lover</div></a>
-        <a href="{% url 'tqc' %}"><div id="TQC" class="nav-item">Test and Quality Engineer</div></a>
-        <a href="{% url 'philosophy' %}"><div id="philosopher" class="nav-item">Philosoper</div></a>
+        <a href="{% url 'ict' %}"><div id="ICT" class="nav-item">ICT</div></a>
+        <a href="{% url 'tqc' %}"><div id="TQC" class="nav-item">Innovatief leren</div></a>
+        <a href="{% url 'philosophy' %}"><div id="philosopher" class="nav-item">Filosoof</div></a>
       </nav>
 
 
@@ -29,8 +29,8 @@
 
       <div class="row1 welcome">
         <div  id="vlak1" class="col-md-4 vlak">
-            <a href="{% url 'post_list' %}"><div id="vlak1a" class="klikvlak half-vlak"><h1>Welkom,</h1>
-              <p class="padding-p">Dit wordt mijn portfolio website. Op dit moment ben ik hier nog druk mee aan de slag.</p>
+            <a href="{% url 'post_list' %}"><div id="vlak1a" class="klikvlak half-vlak"><h1 class="margin-top">Welkom,</h1>
+              <p class="padding-p">Ik ben genomineerd voor de Young Sogetist of the Year verkiezing. Kom er achter waarom!</p>
             </div></a>
             <div id="vlak1b"class="half-vlak">
               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3wwB8V_zygc" frameborder="0" allowfullscreen></iframe></div>
@@ -38,10 +38,10 @@
         <div  id="vlak2" class="col-md-4 vlak">
             <!--<a href="{% url 'annet' %}"><div id="vlak2a" class="half-vlak"><h1><span class="glyphicon glyphicon-user" aria-hidden="true"></h1>
               <p>About me</p>
-            </div></a>--><div id="vlak2a" class="half-vlak"></div>
+            </div></a>--><div id="vlak2a" class="half-vlak"><h1><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></h1>
+            <p id="contacttext">contact</p></div>
             <div id="vlak2b"class="half-vlak">
-                <h1><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></h1>
-                <p id="contacttext">contact</p>
+              <p class="padding-p black-text-box">"Breng je passies in beeld", dat was de opdracht die ik meekreeg voor het filmpje hiernaast.</p>
             </div>
         </div>
         <div  id="vlak3" class="col-md-4 vlak">
@@ -58,13 +58,15 @@
 
       <div class="row1 ICT">
         <div  id="vlak1" class="col-md-4 vlak">
-            <a href="{% url 'ict' %}"><div id="vlak1a" class="klikvlak half-vlak"><h1>ICT</h1></div></a>
+            <a href="{% url 'ict' %}"><div id="vlak1a" class="klikvlak half-vlak"><h1 class="margin-top"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></h1> <p class="padding-p">Twee jaar geleden heb ik mezelf via de Open Universiteit en online cursussen 'omgeschoold' om als tester bij Sogeti te kunnen beginnen.</p></div></a>
             <div id="vlak1b"class="half-vlak"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/4xBelaSrWaI" frameborder="0" allowfullscreen></iframe>
               </div>
             </div>
         <div  id="vlak2" class="col-md-4 vlak">
-            <div id="vlak2a" class="half-vlak"></div>
-            <div id="vlak2b"class="half-vlak"></div>
+            <div id="vlak2a" class="half-vlak">
+              <p class="padding-p black-text-box">Ik ben ingezet als Test en Quality engineer bij TenneT.</p>
+              <p class="padding-p black-text-box">Op dit moment ben ik ook bezig met het leren van Java, JavaScript, git, bash en Django.</p></div>
+            <div id="vlak2b"class="half-vlak"><h1 class="margin-top"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></h1><p class="padding-p"> In deze video vertel ik waarom er meer vrouwen moeten komen werken in de ICT.</p></div>
         </div>
         <div  id="vlak3" class="col-md-4 vlak"></div>
       </div>
@@ -74,12 +76,12 @@
 
       <div class="row1 TQC">
         <div  id="vlak1" class="col-md-4 vlak">
-            <a href="{% url 'tqc' %}"><div id="vlak1a" class="klikvlak half-vlak"><h1>TQC</h1></div></a>
+            <a href="{% url 'tqc' %}"><div id="vlak1a" class="klikvlak half-vlak"><h1 class="padding-p">Durf jij innovatief te leren?</h1></div></a>
             <div id="vlak1b"class="half-vlak">
               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3wwB8V_zygc" frameborder="0" allowfullscreen></iframe></div>
             </div>
         <div  id="vlak2" class="col-md-4 vlak">
-            <div id="vlak2a" class="half-vlak"></div>
+            <div id="vlak2a" class="half-vlak"><h1><span class="glyphicon glyphicon-book" aria-hidden="true"></h1></div>
             <div id="vlak2b"class="half-vlak"></div>
         </div>
         <div  id="vlak3" class="col-md-4 vlak"></div>
@@ -92,14 +94,16 @@
         <div  id="vlak1" class="col-md-4 vlak">
             <a href="{% url 'philosophy' %}"><div id="vlak1a" class="klikvlak half-vlak"><h1>Philosophy</h1></div></a>
             <div id="vlak1b"class="half-vlak">
-              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3wwB8V_zygc" frameborder="0" allowfullscreen></iframe></div>
-            </div>
+              <img src="{% static "img/Self-Constitution.jpg" %}"/></div>
+        </div>
         <div  id="vlak2" class="col-md-4 vlak">
-            <div id="vlak2a" class="half-vlak"></div>
-            <div id="vlak2b"class="half-vlak"></div>
+          <div id="vlak2a" class="half-vlak"><p class="padding-p black-text-box">Ik ben filosofe en ethicus. Ik heb me gespecialiseerd in autonomie en praktische identiteit.</p></div>
+          <div id="vlak2b"class="half-vlak"><p class="padding-p black-text-box">Autonomie betekent letterlijk 'eigen wetten opleggend'. Ethische wetten of regels zijn regels die we onszelf opleggen. Het zijn niet één op één de regels die ons van buitenaf zijn opgelegd door het wetboek of het handboek bedrijfsethiek.</p></div>
         </div>
         <div  id="vlak3" class="col-md-4 vlak"></div>
       </div>
+
+
 
 
     </div>
