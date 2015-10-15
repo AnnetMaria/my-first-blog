@@ -1,29 +1,40 @@
 $(document).ready(function(){
 
+  var start = 1;
+
+      $('#banner').css('display', 'none');
+
   var selectors = ["welcome", "ICT", 'TQC', 'philosopher'];
 
   selectors.forEach(function(item, index, array){
-    $("#"+item).mouseover(function(){
+    $("#"+item).mouseenter(function(){
+      if (start > 0) {
+        start = start -1;
+      } else {
+        $('.banner').css('display', 'none')
+        $('#banner').css('display', 'inherit');
       selectMenuItem(item);
+    }
+
     });
   });
 
-  /*
-  $("#welcome").mouseover(function(){
-    console.log("This is: "+ this);
-    selectMenuItem($(this).attr('id'));
+  $(".welcome #vlak2b").mouseenter(function(){
+    $("#contacttext").text("annet.boog@sogeti.com");
   });
-  $("#ICT").mouseover(function(){
-    console.log("This2 is: "+ this);
-    selectMenuItem($(this).attr('id'));
+
+  $(".klikvlak").click(function(){
+      $('#banner').css('display', 'none');
+      $('.banner').css('display', 'inherit')
+
   });
-  $("#TQC").mouseover(function(){
-    selectMenuItem($(this).attr('id'));
-  });
-  $('#philosopher').mouseover(function(){
-    selectMenuItem($(this).attr('id'));
-  });
-  */
+
+    $("#banner").mouseleave(function(){
+        $('#banner').css('display', 'none');
+        $('.banner').css('display', 'inherit')
+
+    });
+
 
   function selectMenuItem(divId){
     selectors.forEach(function(item, index, array){

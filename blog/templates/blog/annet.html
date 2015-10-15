@@ -1,0 +1,78 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+  <script>
+
+            $(window).scroll(function() {
+            var scroll_position = $(window).scrollTop();
+            console.log(scroll_position);
+
+                if(scroll_position > 20) {
+                 $("#banner").slideUp("slow", function (){
+                        $("#hidden-div-md4").css('display','inherit');
+                   });
+
+
+
+
+                }
+
+
+            });
+
+            var selectors = ["welcome", "ICT", 'TQC', 'philosopher'];
+
+            selectors.forEach(function(item, index, array){
+              $("#"+item).mouseenter(function(){
+
+                $("#banner").slideDown("slow", function (){
+
+                  });
+
+                  $("#hidden-div-md4").slideUp("slow", function (){
+
+                       });
+
+                  $("#hidden-divmd8").slideUp("slow", function (){
+
+                            });
+              });
+            });
+
+
+  </script>
+  <div class="col-md-12" id="page">
+  <div class="col-md-8" id="hidden-div-md8"></div><div class="col-md-4" id="hidden-div-md4"></div>
+  <div class="col-md-8"><p>I am a test engineer, philosopher  and animal-lover with a passion for acquiring knowledge and learning new skills.  I am often engaged in studying several topics at the same time.</p>
+
+<p>Already at a very young age I was fascinated with computers. As a little girl I ‘tested’ all options of our MS-DOS machine. At the age of twelve I learned making websites, using HTML, and enquired into the basics of C++.  Last year, taking the MOOC ‘introduction into Java Programming’ sparked my interest in studying computer science. Next to writing my philosophy MA thesis, I took courses in HTML, CSS, JavaScript, SQL and PHP. With this knowledge I developed the wordpress theme for www.driesterren.com and helped creating www.diogenesclub.nl.</p>
+
+<p>It is my ambition to keep on enhancing my knowledge about testing and developing software.<p/>
+<p> At the moment I am studying for the Java 6 certification and I am learning to code in JavaScript via teamtreehouse.com.<p>
+
+<p>At Sogeti, I started the community ‘Testing with Java’ to share my knowledge and enthusiasm with colleques.<p>
+
+</div><div class="col-md-4 page-headerA"><h1>About me</h1></div>
+
+  </div>
+
+  <div class="col-md-8" id="contact">
+
+</div><div class="col-md-4 page-headerA"><h1>Contact</h1></div>
+
+  </div>
+
+  <div class="col-md-4 page">
+
+    <p><p>
+    <div class="post">
+        {% if post.published_date %}
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+        {% endif %}
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+  </div>
+{% endblock %}

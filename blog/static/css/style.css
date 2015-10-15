@@ -1,38 +1,86 @@
-.post {
-  display: none;
+/* Color Scheme */
+
+.blue-block {
+  background-color: #36939B;
+}
+.lightblue-block {
+  background-color: #98D8C8;
+}
+.red-block {
+  background-color: #D90118;
+}
+.orange-block {
+  background-color: #FF5A2A;
+}
+.yellow-block {
+  background-color: #F6E497;
+}
+.green-block {
+  background-color: #B3E0C1;
+}
+.brown-block {
+  background-color: #474030;
+}
+.sogeti-block {
+  background-color: #ff4019;
+}
+
+.black-text-box {
+  color: #262015;
+}
+
+.padding-p{
+  padding: 40px;
 }
 
 /*nav
 */
 
 .navbar {
-  height: 20%;
+  padding-top: 20px;
+  width: 100%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display:flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-end;
+  position: fixed;
+  z-index: 1;
+  background-color: #FCFAE1;
+  padding-bottom: 20px;
 }
 
 .nav-item{
   padding-left: 40px;
-  font-family: 'Muli' ;
+  /*font-family: 'Muli' ;*/
   font-size: 1.5em;
   cursor: pointer;
 }
 
-.navbar>h1{
+.navbar>a>h1{
   margin: 0px;
   color: #262015;
   /*padding-top: 30px;*/
   align-items: center;
-  font-family: 'Lobster', cursive;
+  font-family: 'Lobster', cursive, sans-serif;
   font-size: 49px;
   cursor: pointer;
+  text-decoration: none;
 }
 
+a:hover {
+  text-decoration: none;
+}
 
+.navbar>a{
+  color: #262015;
+}
+
+#banner {
+  margin-top: 100px;
+
+}
 
 html, body, .container, .row{
   height: 100%;
@@ -68,13 +116,11 @@ html, body, .container, .row{
 
 .vlak h1, p {
   color: #FCFAE1;
-  padding: 20px;
 }
 
 .vlak p, .half-vlak p {
-  font-size: 20px;
+  font-size: 14px;
   text-align: center;
-  padding: 20px;
   font-family: 'Muli' ;
 }
 
@@ -84,11 +130,12 @@ html, body, .container, .row{
 
 #vlak1a{
   background-color: #D90118;
+  cursor: pointer;
 
 }
 
 #vlak1b{
- background-color:
+ background-color: ;
 }
 
 #vlak2{
@@ -124,17 +171,13 @@ html, body, .container, .row{
 
   }
 
-#vlak4{
-    background-color:;
+#vlak3a #vlak3b{
+    background-color:none;
 }
 
-#vlak5{
 
-    }
 
-#vlak6{
 
-}
 
 
 .welcome {
@@ -150,5 +193,67 @@ html, body, .container, .row{
 }
 
 .philosopher{
+  display: none;
+}
+
+
+/* PAGES */
+
+.banner{
+  margin-top: 100px;
+}
+
+
+.banner .jumbotron{
+  border-radius: 0px;
+  height: 50%;
+  margin-bottom: 0px;
+}
+
+.banner .col-md-6{
+  padding: 0px;
+}
+
+.row1 > .col-md-8 {
+  padding: 0px;
+}
+
+.post {
+  display: none;
+}
+
+#page {
+  padding:0px;
+
+
+}
+
+.jumbotron p h {
+  color: #262015;
+}
+
+#page p {
+  color: #262015;
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Times, serif;line-height: 1.5;
+  margin-top: 40px;
+
+
+}
+
+.page-headerA {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:28%;
+  background-color: #36939B;
+}
+
+
+
+#hidden-div-md4{
+  height: 15%;
   display: none;
 }

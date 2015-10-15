@@ -2,8 +2,8 @@
 <html>
     <head>
         <title>Annet Boog</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+        <link rel="stylesheet" href="{% static "css/bootstrap-theme.min.css" %}">
         <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Muli|Inconsolata' rel='stylesheet' type='text/css'>
 
@@ -17,43 +17,50 @@
 
     <div class="container">
       <nav class="navbar">
-        <h1 id="welcome">Annet Boog</h1>
-        <div id="ICT" class="nav-item">ICT-lover</div>
-        <div id="TQC" class="nav-item">Test and Quality Engineer</div>
-        <div id="philosopher" class="nav-item">Philosoper</div>
+        <a href="{% url 'post_list' %}"><h1 id="welcome">Annet Boog</h1></a>
+        <a href="{% url 'ict' %}"><div id="ICT" class="nav-item">ICT-lover</div></a>
+        <a href="{% url 'tqc' %}"><div id="TQC" class="nav-item">Test and Quality Engineer</div></a>
+        <a href="{% url 'philosophy' %}"><div id="philosopher" class="nav-item">Philosoper</div></a>
       </nav>
 
+
       <!-- Welcome -->
+    <div id="banner">
 
       <div class="row1 welcome">
         <div  id="vlak1" class="col-md-4 vlak">
-            <div id="vlak1a" class="half-vlak"><h1>Welcome,</h1>
-              <p>This will become my personal porfolio. Note that this website is still work in progress.</p>
-            </div>
+            <a href="{% url 'post_list' %}"><div id="vlak1a" class="klikvlak half-vlak"><h1>Welkom,</h1>
+              <p class="padding-p">Dit wordt mijn portfolio website. Op dit moment ben ik hier nog druk mee aan de slag.</p>
+            </div></a>
             <div id="vlak1b"class="half-vlak">
               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3wwB8V_zygc" frameborder="0" allowfullscreen></iframe></div>
             </div>
         <div  id="vlak2" class="col-md-4 vlak">
-            <div id="vlak2a" class="half-vlak"><p></p>
-              <p>
+            <!--<a href="{% url 'annet' %}"><div id="vlak2a" class="half-vlak"><h1><span class="glyphicon glyphicon-user" aria-hidden="true"></h1>
+              <p>About me</p>
+            </div></a>--><div id="vlak2a" class="half-vlak"></div>
+            <div id="vlak2b"class="half-vlak">
+                <h1><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></h1>
+                <p id="contacttext">contact</p>
             </div>
-            <div id="vlak2b"class="half-vlak"></div>
         </div>
-        <div  id="vlak3" class="col-md-4 vlak"></div>
-      </div>
-      <div class="row2 welcome">
-        <div  id="vlak4" class="col-md-4 vlak"></div>
-        <div id="vlak5" class="col-md-4 vlak"></div>
-        <div id="vlak6" class="col-md-4 vlak"></div>
+        <div  id="vlak3" class="col-md-4 vlak">
+          <div id="vlak3a" class="half-vlak">
+          </div>
+          <div id="vlak3b"class="half-vlak">
+
+          </div>
+
+        </div>
       </div>
 
       <!-- ICT -->
 
       <div class="row1 ICT">
         <div  id="vlak1" class="col-md-4 vlak">
-            <div id="vlak1a" class="half-vlak"><h1>ICT</h1></div>
-            <div id="vlak1b"class="half-vlak">
-              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3wwB8V_zygc" frameborder="0" allowfullscreen></iframe></div>
+            <a href="{% url 'ict' %}"><div id="vlak1a" class="klikvlak half-vlak"><h1>ICT</h1></div></a>
+            <div id="vlak1b"class="half-vlak"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/4xBelaSrWaI" frameborder="0" allowfullscreen></iframe>
+              </div>
             </div>
         <div  id="vlak2" class="col-md-4 vlak">
             <div id="vlak2a" class="half-vlak"></div>
@@ -61,17 +68,13 @@
         </div>
         <div  id="vlak3" class="col-md-4 vlak"></div>
       </div>
-      <div class="row2 ICT">
-        <div  id="vlak4" class="col-md-4 vlak"></div>
-        <div id="vlak5" class="col-md-4 vlak"></div>
-        <div id="vlak6" class="col-md-4 vlak"></div>
-      </div>
+
 
       <!-- TQC -->
 
       <div class="row1 TQC">
         <div  id="vlak1" class="col-md-4 vlak">
-            <div id="vlak1a" class="half-vlak"><h1>TQC</h1></div>
+            <a href="{% url 'tqc' %}"><div id="vlak1a" class="klikvlak half-vlak"><h1>TQC</h1></div></a>
             <div id="vlak1b"class="half-vlak">
               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3wwB8V_zygc" frameborder="0" allowfullscreen></iframe></div>
             </div>
@@ -81,17 +84,13 @@
         </div>
         <div  id="vlak3" class="col-md-4 vlak"></div>
       </div>
-      <div class="row2 TQC">
-        <div  id="vlak4" class="col-md-4 vlak"></div>
-        <div id="vlak5" class="col-md-4 vlak"></div>
-        <div id="vlak6" class="col-md-4 vlak"></div>
-      </div>
+
 
       <!-- philosopher -->
 
       <div class="row1 philosopher">
         <div  id="vlak1" class="col-md-4 vlak">
-            <div id="vlak1a" class="half-vlak"><h1>Philosophy</h1></div>
+            <a href="{% url 'philosophy' %}"><div id="vlak1a" class="klikvlak half-vlak"><h1>Philosophy</h1></div></a>
             <div id="vlak1b"class="half-vlak">
               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3wwB8V_zygc" frameborder="0" allowfullscreen></iframe></div>
             </div>
@@ -101,23 +100,15 @@
         </div>
         <div  id="vlak3" class="col-md-4 vlak"></div>
       </div>
-      <div class="row2 philosopher">
-        <div  id="vlak4" class="col-md-4 vlak"></div>
-        <div id="vlak5" class="col-md-4 vlak"></div>
-        <div id="vlak6" class="col-md-4 vlak"></div>
-      </div>
+
+
+    </div>
+
 
       {% block content %}
             {% endblock %}
 
     </div><!-- /container -->
 
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../../dist/js/bootstrap.4.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>

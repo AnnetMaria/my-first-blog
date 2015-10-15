@@ -1,0 +1,69 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+  <script>
+
+            $(window).scroll(function() {
+            var scroll_position = $(window).scrollTop();
+            console.log(scroll_position);
+
+                if(scroll_position > 20) {
+                 $("#banner").slideUp("slow", function (){
+
+                   });
+
+                $("#hidden-div-md4").slideDown("slow", function (){
+
+                     });
+
+                $("#hidden-divmd8").slideDown("slow", function (){
+
+                          });
+                }
+
+
+            });
+
+            var selectors = ["welcome", "ICT", 'TQC', 'philosopher'];
+
+            selectors.forEach(function(item, index, array){
+              $("#"+item).mouseenter(function(){
+
+                $("#banner").slideDown("slow", function (){
+
+                  });
+
+                  $("#hidden-div-md4").slideUp("slow", function (){
+
+                       });
+
+                  $("#hidden-divmd8").slideUp("slow", function (){
+
+                            });
+              });
+            });
+
+
+  </script>
+  <div class="col-md-12" id="page">
+  <div class="col-md-8" id="hidden-div-md8"></div><div class="col-md-4" id="hidden-div-md4"></div>
+  <div class="col-md-8">
+
+  </div><div class="col-md-4 page-headerA"><h1>Contact</h1></div>
+
+  </div>
+
+  <div class="col-md-4 page">
+
+    <p><p>
+    <div class="post">
+        {% if post.published_date %}
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+        {% endif %}
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+  </div>
+{% endblock %}
