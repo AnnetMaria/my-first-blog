@@ -2,37 +2,37 @@
 
 
 {% block content %}
-<div class='banner'>
-  <div id="home">
-
-    <div class="row1">
-      <div class="col-md-8">
-      <div class="jumbotron red-block">
-        <p>Hoera! Ik ben nominee voor de Young Sogetist of the Year verkiezing.</p>
-        <p>Stem op mij, of kom er achter waarom je op mij zou moeten stemmen.</p>
-      </div>
-      <div class="col-md-6 vlak half-vlak"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/3wwB8V_zygc" frameborder="0" allowfullscreen></iframe></div>
-      <div class='col-md-6 vlak half-vlak blue-block'><p class="padding-p">"Breng je passies in beeld", dat was de opdracht die ik meekreeg voor het filmpje hiernaast.</p></div>
-    </div>
-    <div  id="vlak3" class="col-md-4 vlak"></div> <!-- Foto divje-->
+<div class="my-page-bottom">
+  <div class="col-md-12">
+    <h1>Collega's over mij</h1>
   </div>
-  <!--<div class="row2">
-    <div class="col-md-4 vlak blue-block"><p>test</p></div>
-    <div class="col-md-4 vlak lightblue-block"><p>test</p></div>
-    <div class="col-md-4 vlak red-block"><p>test</p></div>
-  </div>-->
+  <div class=col-md-8>
+    <h3>Diederik Vieleers, Director Delivery en Portfolio</h3>
+    <p>Ik ben met elf anderen genomineerd voor Young Sogetist of the Year 2015. Met Diederik Vieleers, Director Delivery en Portfolio van Sogeti
+    had ik een gesprek. Hij bepaalde samen van Marco van den Brink wie door zouden gaan naar de finale. Ik vroeg hem een video-boodschap op te nemen.</p>
   </div>
+  <div class="col-md-4 video">
+    <iframe width="100%" height="210px" src=https://www.youtube.com/embed/FN5mTJq2qJ0 frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class="col-md-12">
+    <h3>André Louwes, Testmanager</h3>
+    <p>André Louwes is mijn directe leidinggevende bij TenneT. Hij is ook een Sogetist.</p>
+    <blockquote>
+      <p>"Annet is een bijzonder  intelligente en ambitieuze jonge vrouw,
+        de ambitie zit vooral in meer willen leren, meer willen kunnen en dan ook meer willen doen.
+        Met een filosofie achtergrond had ze de ambitie om meer te leren van programmeren, een bijzondere combinatie."
+      </p>
+      <p>
+        "Het testtraject kan eenvoudiger en sneller worden uitgevoerd en met een hogere dekking dan zonder de automatisering die Annet heeft opgezet."
+      </p>
+    </blockquote>
 
-</div><!-- einde van de banner -->
-
-<div class="col-md-12 blue-block margin-top  vlak">
-  <div class="col-md-4 blue-block vlak"><h1 class="padding-p black-text-box">Anderen over mij...</h1></div>
-  <div class="col-md-8 lightblue-block"><p class="padding-p black-text-box">Natuurlijk vind ik mezelf (meestal) goed. Maar het allerbelangrijkste is uiteraard wat collega's van mij vinden.</p></div>
+  </div>
 </div>
 
 
     {% for post in posts %}
-        <div class="col-md-12 post vlak">
+        <div class="col-md-12 post">
 
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             <p class="date blog-post-meta">
@@ -41,5 +41,8 @@
             <p>{{ post.text|linebreaks }}</p>
         </div>
     {% endfor %}
+
+
+
 
 {% endblock content %}
